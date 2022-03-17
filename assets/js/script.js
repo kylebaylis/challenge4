@@ -28,17 +28,28 @@ var codeGameStart = function() {
     }
         document.getElementById("time").innerHTML = "<p>" + timeRemain + "</p>";
         timeRemain -= 1;     
-        if (timeRemain === 0) {
+        if (timeRemain === -1) {
             window.alert("Game over!");
         }
     }
     
     setInterval(startCount, 10);
-    // timer = document.getElementById("time").innerHTML = "<p>" + timeRemain + "</p>"; not neede?
+    // timer = document.getElementById("time").innerHTML = "<p>" + timeRemain + "</p>"; not needed?
         
     // to begin game
     if (codeGameStart) {
-        toStart = document.getElementById("game").innerHTML = "<button id='startGame'>Ok</button>";
+        toStart = document.getElementById("game").innerHTML = 
+        "<p>Question 1: Commonly used data types do NOT include</p>" +
+        "<button id='pickOne'>Strings</button>" +
+        "<button id='pickTwo'>Booleans</button>" +
+        "<button id='pickThree'>Alerts</button>" +
+        "<button id='pickFour'>Numbers</button>";
+        // if question is right
+        var rightAnsClick = function() {
+            window.alert("hi");
+        }
+        var rightAns1 = document.getElementById("pickThree");
+        rightAns1.addEventListener("click", rightAnsClick);
     }
 }
 
