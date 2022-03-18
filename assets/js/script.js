@@ -21,7 +21,8 @@ var codeGameStart = function() {
         document.getElementById("time").innerHTML = "<p>" + [timeRemain - 1] + "</p>";
         timeRemain -= 1;     
         if (timeRemain === -1) {
-            window.alert("Game over!");
+            // game over screen
+            toStart = document.getElementById("game").innerHTML = "<p>over</p>";
         }
     }
     setInterval(startCount, 1000);
@@ -61,9 +62,11 @@ var codeGameStart = function() {
             rightAns3.addEventListener("click", threeRightAnsClick);
         }
 
-        // if all three are right
+        // if all three are right - win screen
         var threeRightAnsClick = function() {
-            window.alert("you win");
+            toStart = document.getElementById("game").innerHTML = 
+            "<p> Your high score is " + timeRemain.toString(); + "</p>" +
+            // place to enter initials and save high score
         }
         
         var rightAns1 = document.getElementById("onePickThree");
