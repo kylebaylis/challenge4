@@ -5,7 +5,7 @@ var timeRemain = 30;
 var timer = document.getElementById("time").innerHTML = "<p>" + timeRemain + "</p>";
 
 // create initial start button
-var toStart = document.getElementById("game").innerHTML = "<button id='startGame'>Start</button>";
+var toStart = document.getElementById("game").innerHTML = "<button id='startGame' class='startGame'>Start</button>";
 
 // for addEventListener to get button id
 var startButton = document.getElementById("startGame");
@@ -23,7 +23,7 @@ var codeGameStart = function() {
         if (timeRemain === -1) {
             // game over screen
             toStart = document.getElementById("game").innerHTML = 
-            "<p>Game over! Better luck next time.</p>";
+            "<p class='gameQues'>Game over! Better luck next time.</p>";
         }
     }
     setInterval(startCount, 1000);
@@ -31,7 +31,7 @@ var codeGameStart = function() {
     // to begin game
     if (codeGameStart) {
         toStart = document.getElementById("game").innerHTML = 
-        "<p>Question 1: Commonly used data types do NOT include</p>" +
+        "<p class='gameQues'>Question 1: Commonly used data types do NOT include</p>" +
         "<button id='onePickOne'>Strings</button>" +
         "<button id='onePickTwo'>Booleans</button>" +
         "<button id='onePickThree'>Alerts</button>" +
@@ -40,7 +40,7 @@ var codeGameStart = function() {
         // if question one is right
         var oneRightAnsClick = function() {
             toStart = document.getElementById("game").innerHTML = 
-            "<p>Question 2: The condition in an if/else statenent is enclosed with</p>" +
+            "<p class='gameQues'>Question 2: The condition in an if/else statenent is enclosed with</p>" +
             "<button id='twoPickOne'>Quotes</button>" +
             "<button id='twoPickTwo'>Parenthesis</button>" +
             "<button id='twoPickThree'>Curly Brackets</button>" +
@@ -53,7 +53,7 @@ var codeGameStart = function() {
         // if question two is right
         var twoRightAnsClick = function() {
             toStart = document.getElementById("game").innerHTML = 
-            "<p>Question 3: Arrays in JavaScript can be used to store</p>" +
+            "<p class='gameQues'>Question 3: Arrays in JavaScript can be used to store</p>" +
             "<button id='threePickOne'>Numbers and Strings</button>" +
             "<button id='threePickTwo'>Other Arrays</button>" +
             "<button id='threePickThree'>Booleans</button>" +
@@ -66,7 +66,7 @@ var codeGameStart = function() {
         // if all three are right - win screen
         var threeRightAnsClick = function() {
             toStart = document.getElementById("game").innerHTML = 
-            "<p> You win! Your score is " + timeRemain.toString(); + "</p>";
+            "<p class='gameQues'> You win! Your score is " + timeRemain.toString(); + "</p>";
             // place to enter initials and save high score
         }
         

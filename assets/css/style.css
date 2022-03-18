@@ -1,0 +1,52 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 200px;
+}
+
+header .wholeTime {
+    display: flex;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10px 20px 10px 0;
+}
+
+header h1 {
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+.game button {
+    background-color: lightslategray;
+    color: white;
+    font-size: 30px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.outerGame {
+    height: 200px;
+    position: relative;
+}
+
+.game {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.gameQues {
+    margin: 50px 50px 50px 0;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+}
