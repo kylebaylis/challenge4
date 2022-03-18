@@ -22,7 +22,8 @@ var codeGameStart = function() {
         timeRemain -= 1;     
         if (timeRemain === -1) {
             // game over screen
-            toStart = document.getElementById("game").innerHTML = "<p>over</p>";
+            toStart = document.getElementById("game").innerHTML = 
+            "<p>Game over! Better luck next time.</p>";
         }
     }
     setInterval(startCount, 1000);
@@ -65,7 +66,7 @@ var codeGameStart = function() {
         // if all three are right - win screen
         var threeRightAnsClick = function() {
             toStart = document.getElementById("game").innerHTML = 
-            "<p> Your high score is " + timeRemain.toString(); + "</p>" +
+            "<p> You win! Your score is " + timeRemain.toString(); + "</p>";
             // place to enter initials and save high score
         }
         
