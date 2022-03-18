@@ -10,16 +10,8 @@ var toStart = document.getElementById("game").innerHTML = "<button id='startGame
 // for addEventListener to get button id
 var startButton = document.getElementById("startGame");
 
-
 // main game code
 var codeGameStart = function() {
-    // window.alert(""); // test code to see if function and click work - it does
-
-    /*
-    // decrease time by one on button click (needs to be every second) COUNTDOWN TIMER HERE
-    timeRemain = timeRemain - 1;
-    */
-
     // timer
     var startCount = function() {
         if (timeRemain <= -1) {
@@ -32,24 +24,28 @@ var codeGameStart = function() {
             window.alert("Game over!");
         }
     }
-    
-    setInterval(startCount, 10);
-    // timer = document.getElementById("time").innerHTML = "<p>" + timeRemain + "</p>"; not needed?
+    setInterval(startCount, 100);
         
     // to begin game
     if (codeGameStart) {
         toStart = document.getElementById("game").innerHTML = 
         "<p>Question 1: Commonly used data types do NOT include</p>" +
-        "<button id='pickOne'>Strings</button>" +
-        "<button id='pickTwo'>Booleans</button>" +
-        "<button id='pickThree'>Alerts</button>" +
-        "<button id='pickFour'>Numbers</button>";
-        // if question is right
-        var rightAnsClick = function() {
-            window.alert("hi");
+        "<button id='onePickOne'>Strings</button>" +
+        "<button id='onePickTwo'>Booleans</button>" +
+        "<button id='onePickThree'>Alerts</button>" +
+        "<button id='onePickFour'>Numbers</button>";
+        
+        // if question one is right
+        var oneRightAnsClick = function() {
+            toStart = document.getElementById("game").innerHTML = 
+            "<p>Question 2: The condition in an if/else statenent is enclosed with</p>" +
+            "<button id='twoPickOne'>Quotes</button>" +
+            "<button id='twoPickTwo'>Parenthesis</button>" +
+            "<button id='twoPickThree'>Curly Brackets</button>" +
+            "<button id='twoPickFour'>Square Brackets</button>";
         }
-        var rightAns1 = document.getElementById("pickThree");
-        rightAns1.addEventListener("click", rightAnsClick);
+        var rightAns1 = document.getElementById("onePickThree");
+        rightAns1.addEventListener("click", oneRightAnsClick);
     }
 }
 
@@ -57,4 +53,17 @@ var codeGameStart = function() {
 var gameBegin = startButton.addEventListener("click", codeGameStart); 
 
 
+/*
+            var rightAns2 = document.getElementById("twoPickTwo");
+            rightAns2.addEventListener("click", twoRightAnsClick);
 
+            // if question two is right
+            var twoRightAnsClick = function() {
+                toStart = document.getElementById("game").innerHTML = 
+                "<p>Question 3: The condition in an if/else statenent is enclosed with</p>" +
+                "<button id='threePickOne'>Quotes</button>" +
+                "<button id='threePickTwo'>Parenthesis</button>" +
+                "<button id='threePickThree'>Curly Brackets</button>" +
+                "<button id='threePickFour'>Square Brackets</button>";
+            }
+*/
