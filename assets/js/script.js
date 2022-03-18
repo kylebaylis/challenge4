@@ -31,20 +31,20 @@ var codeGameStart = function() {
     // to begin game
     if (codeGameStart) {
         toStart = document.getElementById("game").innerHTML = 
-        "<p class='gameQues'>Question 1: Commonly used data types do NOT include</p>" +
-        "<button id='onePickOne'>Strings</button>" +
-        "<button id='onePickTwo'>Booleans</button>" +
-        "<button id='onePickThree'>Alerts</button>" +
-        "<button id='onePickFour'>Numbers</button>";
+        "<p class='gameQues'>Question 1: Commonly used data types do NOT include:</p>" +
+        "<button id='onePickOne' class='gameBtn'>Strings</button>" +
+        "<button id='onePickTwo' class='gameBtn'>Booleans</button>" +
+        "<button id='onePickThree' class='gameBtn'>Alerts</button>" +
+        "<button id='onePickFour' class='gameBtn'>Numbers</button>";
         
         // if question one is right
         var oneRightAnsClick = function() {
             toStart = document.getElementById("game").innerHTML = 
-            "<p class='gameQues'>Question 2: The condition in an if/else statenent is enclosed with</p>" +
-            "<button id='twoPickOne'>Quotes</button>" +
-            "<button id='twoPickTwo'>Parenthesis</button>" +
-            "<button id='twoPickThree'>Curly Brackets</button>" +
-            "<button id='twoPickFour'>Square Brackets</button>";
+            "<p class='gameQues'>Question 2: The condition in an if/else statenent is enclosed with:</p>" +
+            "<button id='twoPickOne' class='gameBtn'>Quotes</button>" +
+            "<button id='twoPickTwo' class='gameBtn'>Parenthesis</button>" +
+            "<button id='twoPickThree' class='gameBtn'>Curly Brackets</button>" +
+            "<button id='twoPickFour' class='gameBtn'>Square Brackets</button>";
 
             var rightAns2 = document.getElementById("twoPickTwo");
             rightAns2.addEventListener("click", twoRightAnsClick);
@@ -53,11 +53,11 @@ var codeGameStart = function() {
         // if question two is right
         var twoRightAnsClick = function() {
             toStart = document.getElementById("game").innerHTML = 
-            "<p class='gameQues'>Question 3: Arrays in JavaScript can be used to store</p>" +
-            "<button id='threePickOne'>Numbers and Strings</button>" +
-            "<button id='threePickTwo'>Other Arrays</button>" +
-            "<button id='threePickThree'>Booleans</button>" +
-            "<button id='threePickFour'>All of the above</button>";
+            "<p class='gameQues'>Question 3: Arrays in JavaScript can be used to store:</p>" +
+            "<button id='threePickOne' class='gameBtn'>Numbers and Strings</button>" +
+            "<button id='threePickTwo' class='gameBtn'>Other Arrays</button>" +
+            "<button id='threePickThree' class='gameBtn'>Booleans</button>" +
+            "<button id='threePickFour' class='gameBtn'>All of the above</button>";
 
             var rightAns3 = document.getElementById("threePickFour");
             rightAns3.addEventListener("click", threeRightAnsClick);
