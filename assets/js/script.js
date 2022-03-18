@@ -47,8 +47,6 @@ var codeGameStart = function() {
             var rightAns2 = document.getElementById("twoPickTwo");
             rightAns2.addEventListener("click", twoRightAnsClick);
         }
-        var rightAns1 = document.getElementById("onePickThree");
-        rightAns1.addEventListener("click", oneRightAnsClick);
 
         // if question two is right
         var twoRightAnsClick = function() {
@@ -67,9 +65,11 @@ var codeGameStart = function() {
         var threeRightAnsClick = function() {
             window.alert("you win");
         }
+        
+        var rightAns1 = document.getElementById("onePickThree");
+        rightAns1.addEventListener("click", oneRightAnsClick);
     }
 }
-
 // to click start to begin the game
 var gameBegin = startButton.addEventListener("click", codeGameStart); 
 
