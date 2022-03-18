@@ -1,5 +1,5 @@
 // time in timer at start
-var timeRemain = 60;
+var timeRemain = 30;
 
 // timer start number
 var timer = document.getElementById("time").innerHTML = "<p>" + timeRemain + "</p>";
@@ -18,13 +18,13 @@ var codeGameStart = function() {
         clearInterval(startCount);
         return;
     }
-        document.getElementById("time").innerHTML = "<p>" + timeRemain + "</p>";
+        document.getElementById("time").innerHTML = "<p>" + [timeRemain - 1] + "</p>";
         timeRemain -= 1;     
         if (timeRemain === -1) {
             window.alert("Game over!");
         }
     }
-    setInterval(startCount, 100);
+    setInterval(startCount, 1000);
         
     // to begin game
     if (codeGameStart) {
@@ -43,9 +43,30 @@ var codeGameStart = function() {
             "<button id='twoPickTwo'>Parenthesis</button>" +
             "<button id='twoPickThree'>Curly Brackets</button>" +
             "<button id='twoPickFour'>Square Brackets</button>";
+
+            var rightAns2 = document.getElementById("twoPickTwo");
+            rightAns2.addEventListener("click", twoRightAnsClick);
         }
         var rightAns1 = document.getElementById("onePickThree");
         rightAns1.addEventListener("click", oneRightAnsClick);
+
+        // if question two is right
+        var twoRightAnsClick = function() {
+            toStart = document.getElementById("game").innerHTML = 
+            "<p>Question 3: Arrays in JavaScript can be used to store</p>" +
+            "<button id='threePickOne'>Numbers and Strings</button>" +
+            "<button id='threePickTwo'>Other Arrays</button>" +
+            "<button id='threePickThree'>Booleans</button>" +
+            "<button id='threePickFour'>All of the above</button>";
+
+            var rightAns3 = document.getElementById("threePickFour");
+            rightAns3.addEventListener("click", threeRightAnsClick);
+        }
+
+        // if all three are right
+        var threeRightAnsClick = function() {
+            window.alert("you win");
+        }
     }
 }
 
@@ -53,17 +74,3 @@ var codeGameStart = function() {
 var gameBegin = startButton.addEventListener("click", codeGameStart); 
 
 
-/*
-            var rightAns2 = document.getElementById("twoPickTwo");
-            rightAns2.addEventListener("click", twoRightAnsClick);
-
-            // if question two is right
-            var twoRightAnsClick = function() {
-                toStart = document.getElementById("game").innerHTML = 
-                "<p>Question 3: The condition in an if/else statenent is enclosed with</p>" +
-                "<button id='threePickOne'>Quotes</button>" +
-                "<button id='threePickTwo'>Parenthesis</button>" +
-                "<button id='threePickThree'>Curly Brackets</button>" +
-                "<button id='threePickFour'>Square Brackets</button>";
-            }
-*/
