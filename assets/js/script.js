@@ -94,11 +94,14 @@ var codeGameStart = function() {
             // saves score to local storage
             localStorage.setItem("score", timeRemain);
             toStart = document.getElementById("game").innerHTML = 
-            "<p class='gameQues'> You win! Your score is " + timeRemain.toString() + "</p>" +
-            "<p>Hi</p>";
+            "<p class='gameQues'> You win! Your score is " + timeRemain.toString() + "</p>";
             timeRemain = timeRemain.toString;
+            
             // place to enter initials and save high score
-
+            setTimeout(function() {
+                var initials = window.prompt("Enter your initials for your high score:");
+                localStorage.setItem("user", initials);
+            }, 500);
         }
         
         var rightAns1 = document.getElementById("onePickThree");
