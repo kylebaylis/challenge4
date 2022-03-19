@@ -50,7 +50,7 @@ var codeGameStart = function() {
         // if question one is right
         var oneRightAnsClick = function() {
             toStart = document.getElementById("game").innerHTML = 
-            "<p class='gameQues'>Question 2: The condition in an if/else statenent is enclosed with:</p>" +
+            "<p class='gameQues'>Question 2: The condition in an if/else statement is enclosed with:</p>" +
             "<button id='twoPickOne' class='gameBtn'>Quotes</button>" +
             "<button id='twoPickTwo' class='gameBtn'>Parenthesis</button>" +
             "<button id='twoPickThree' class='gameBtn'>Curly Brackets</button>" +
