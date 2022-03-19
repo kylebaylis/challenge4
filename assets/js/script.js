@@ -37,6 +37,23 @@ var codeGameStart = function() {
         "<button id='onePickThree' class='gameBtn'>Alerts</button>" +
         "<button id='onePickFour' class='gameBtn'>Numbers</button>";
         
+        // if question one is wrong
+        var wrongAns = function() {
+            if (timeRemain >= 10) {
+                timeRemain -= 10;
+            }
+            else {
+                timeRemain -= timeRemain;
+            }
+        }
+        
+        var oneWrongAns1 = document.getElementById("onePickOne");
+        oneWrongAns1.addEventListener("click", wrongAns);
+        var oneWrongAns2 = document.getElementById("onePickTwo");
+        oneWrongAns2.addEventListener("click", wrongAns);
+        var oneWrongAns3 = document.getElementById("onePickFour");
+        oneWrongAns3.addEventListener("click", wrongAns);
+
         // if question one is right
         var oneRightAnsClick = function() {
             toStart = document.getElementById("game").innerHTML = 
