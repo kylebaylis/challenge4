@@ -91,10 +91,14 @@ var codeGameStart = function() {
 
         // if all three are right - win screen
         var threeRightAnsClick = function() {
+            // saves score to local storage
+            localStorage.setItem("score", timeRemain);
             toStart = document.getElementById("game").innerHTML = 
-            "<p class='gameQues'> You win! Your score is " + timeRemain.toString(); + "</p>";
+            "<p class='gameQues'> You win! Your score is " + timeRemain.toString() + "</p>" +
+            "<p>Hi</p>";
             timeRemain = timeRemain.toString;
             // place to enter initials and save high score
+
         }
         
         var rightAns1 = document.getElementById("onePickThree");
