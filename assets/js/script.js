@@ -93,6 +93,7 @@ var codeGameStart = function() {
         var threeRightAnsClick = function() {
             toStart = document.getElementById("game").innerHTML = 
             "<p class='gameQues'> You win! Your score is " + timeRemain.toString(); + "</p>";
+            timeRemain = timeRemain.toString;
             // place to enter initials and save high score
         }
         
