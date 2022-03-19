@@ -79,6 +79,14 @@ var codeGameStart = function() {
 
             var rightAns3 = document.getElementById("threePickFour");
             rightAns3.addEventListener("click", threeRightAnsClick);
+
+            // if wrong answer is clicked for question 3 (to take time off)
+            var threeWrongAns1 = document.getElementById("threePickOne");
+            threeWrongAns1.addEventListener("click", wrongAns);
+            var threeWrongAns2 = document.getElementById("threePickTwo");
+            threeWrongAns2.addEventListener("click", wrongAns);
+            var threeWrongAns3 = document.getElementById("threePickThree");
+            threeWrongAns3.addEventListener("click", wrongAns);
         }
 
         // if all three are right - win screen
