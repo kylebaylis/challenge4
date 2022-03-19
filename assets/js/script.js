@@ -10,6 +10,16 @@ var toStart = document.getElementById("game").innerHTML = "<button id='startGame
 // for addEventListener to get button id
 var startButton = document.getElementById("startGame");
 
+// take time off for clicking wrong answer
+var wrongAns = function() {
+    if (timeRemain >= 10) {
+        timeRemain -= 10;
+    }
+    else {
+        timeRemain -= timeRemain;
+    }
+}
+
 // main game code
 var codeGameStart = function() {
     // timer
@@ -37,23 +47,6 @@ var codeGameStart = function() {
         "<button id='onePickThree' class='gameBtn'>Alerts</button>" +
         "<button id='onePickFour' class='gameBtn'>Numbers</button>";
         
-        // if question one is wrong
-        var wrongAns = function() {
-            if (timeRemain >= 10) {
-                timeRemain -= 10;
-            }
-            else {
-                timeRemain -= timeRemain;
-            }
-        }
-        
-        var oneWrongAns1 = document.getElementById("onePickOne");
-        oneWrongAns1.addEventListener("click", wrongAns);
-        var oneWrongAns2 = document.getElementById("onePickTwo");
-        oneWrongAns2.addEventListener("click", wrongAns);
-        var oneWrongAns3 = document.getElementById("onePickFour");
-        oneWrongAns3.addEventListener("click", wrongAns);
-
         // if question one is right
         var oneRightAnsClick = function() {
             toStart = document.getElementById("game").innerHTML = 
@@ -89,6 +82,14 @@ var codeGameStart = function() {
         
         var rightAns1 = document.getElementById("onePickThree");
         rightAns1.addEventListener("click", oneRightAnsClick);
+
+        // if wrong answer is clicked for question 1 (to take time off)
+        var oneWrongAns1 = document.getElementById("onePickOne");
+        oneWrongAns1.addEventListener("click", wrongAns);
+        var oneWrongAns2 = document.getElementById("onePickTwo");
+        oneWrongAns2.addEventListener("click", wrongAns);
+        var oneWrongAns3 = document.getElementById("onePickFour");
+        oneWrongAns3.addEventListener("click", wrongAns);
     }
 }
 // to click start to begin the game
