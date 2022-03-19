@@ -58,6 +58,14 @@ var codeGameStart = function() {
 
             var rightAns2 = document.getElementById("twoPickTwo");
             rightAns2.addEventListener("click", twoRightAnsClick);
+
+            // if wrong answer is clicked for question 2 (to take time off)
+            var twoWrongAns1 = document.getElementById("twoPickOne");
+            twoWrongAns1.addEventListener("click", wrongAns);
+            var twoWrongAns2 = document.getElementById("twoPickThree");
+            twoWrongAns2.addEventListener("click", wrongAns);
+            var twoWrongAns3 = document.getElementById("twoPickFour");
+            twoWrongAns3.addEventListener("click", wrongAns);
         }
 
         // if question two is right
